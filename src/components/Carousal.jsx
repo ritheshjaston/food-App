@@ -7,10 +7,10 @@ import '../App.css';
 
 export default function Carousal() {
     return (
-        <div id="carouselExampleControls" className="carousel slide bgsend " data-bs-ride="carousel" >
+        <div id="carouselExampleControls" className="carousel slide bgsend w-100" data-bs-ride="carousel" >
             <div className="carousel-inner">
                 <div className="carousel-item active">
-                    <img src={img1} className="d-block w-100" alt="..."/>
+                    <img src={img1} className="d-block w-100 " alt="..."/>
                 </div>
                 <div className="carousel-item">
                     <img src={img2} className="d-block w-100" alt="..."/>

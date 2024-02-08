@@ -3,8 +3,8 @@ import React from 'react'
 export default function Card() {
   return (
     <div>
-      <div class="card" style={{ width: "18rem", maxHeight: "360px" }}>
-          <img src="..." class="card-img-top" alt="..." />
+      <div class="card" style={{ width: "18rem", maxHeight: "360px",margin:"10px" }}>
+          <img style={{"overflow": "hidden"}} src="https://img.freepik.com/free-photo/delicious-soup-black-bowl_144627-20705.jpg?w=740&t=st=1707406166~exp=1707406766~hmac=7cdb8fb7059fa31e6125f18ba3592487fb2d8378f26ba4c05becdd3bed8fe910" class="card-img-top" alt="..." />
           <div class="card-body">
             <h5 class="card-title">Card title</h5>
             <p class="card-text">This is some important Text</p>

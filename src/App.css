@@ -15,11 +15,22 @@
 .textabovecaurosol {
   position: absolute;
   z-index: 10;
-  margin-top: 15%;
+  margin-top: 10%;
   color: white;
   font-size: 72px;
   margin-left: 8%;
 }
 .bgsend {
   z-index: 0;
+}
+.searchbarz{
+  position: absolute;
+  z-index: 10;
+  margin-top: 27%;
+  color: white;
+  font-size: 72px;
+  margin-left: 8%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
