@@ -3,3 +3,30 @@
     z-index: 10;
 
 }
+.signupmain{
+    width: 35%;
+    height: 400px;
+    background: yellow;
+    margin: auto;
+    margin-top: 10%;
+    border-radius: 10px;
+    
+}
+.signupmain h2{
+    text-align: center;
+    padding-top: 45px;
+    font-weight: 700;
+    text-shadow: #673ab7 1px 0 10px !important;
+}
+
+@media only screen and (max-width: 480px) {
+    .signupmain{
+        width: 90%;
+        height: 400px;
+        background: yellow;
+        margin: auto;
+        margin-top: 10%;
+        border-radius: 10px;
+    }
+   
+}
