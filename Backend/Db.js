@@ -5,6 +5,11 @@ const mongodb = async () => {
   try {
     await mongoose.connect(mongouri);
     console.log("Connected to MongoDB");
+
+    // Fetch data using async/await
+    const fetchdata = await mongoose.connection.db.collection("fooditems").find({}).toArray();
+    console.log(fetchdata);
+
   } catch (error) {
     console.error("Error connecting to MongoDB:", error.message);
   }
