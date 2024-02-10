@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const mongouri = "mongodb+srv://ritheshjaston22:gofood@gofood.s6kf41a.mongodb.net/?retryWrites=true&w=majority";
+const mongouri = "mongodb+srv://ritheshjaston22:gofood@gofood.s6kf41a.mongodb.net/gofood?retryWrites=true&w=majority";
 
 const mongodb = async () => {
   try {
