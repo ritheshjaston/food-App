@@ -5,7 +5,8 @@
 }
 .signupmain{
     width: 35%;
-    height: 400px;
+    height: fit-content;
+    padding-bottom: 10px;
     background: yellow;
     margin: auto;
     margin-top: 10%;
@@ -22,11 +23,39 @@
 @media only screen and (max-width: 480px) {
     .signupmain{
         width: 90%;
-        height: 400px;
+        height: fit-content;
+        padding-bottom: 10px;
         background: yellow;
         margin: auto;
         margin-top: 10%;
         border-radius: 10px;
     }
    
+}
+.formlabel{
+    margin-left: 10%;
+}
+.input{
+    background: white;
+    width: 79%;
+    border-radius: 5px;
+    margin-left: 10%;
+    height: 40px;
+    color: black;
+}
+.buttonform{
+    width: -webkit-fill-available;
+    margin-left: 11%;
+    margin-top: 3%;
+    margin-right: 11%;
+}
+.buttonalreadyuser{
+    width: -webkit-fill-available;
+    margin-left: 20%;
+    margin-top: 3%;
+    margin-right: 20%;
+}
+.linktologin{
+    text-decoration: none;
+
 }
