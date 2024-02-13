@@ -6,6 +6,7 @@ import Carousal from "../components/Carousal";
 import Searchbar from "../components/Searchbar";
 import '../App.css';
 export default function Home() {
+  
   return (
     <div>
       <div>

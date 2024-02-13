@@ -48,8 +48,9 @@ roter.post(
       if (!(userdata.password == password)) {
         return res.status(400).json({ errors: "Invalid Password" });
       }
-      return res.json({ success: true });
       
+      return res.json({ success: true ,id: userdata._id,name: userdata.name,location: userdata.location,email: userdata.email});
+
     } catch (error) {
       console.log(error);
       res.json({ success: false });

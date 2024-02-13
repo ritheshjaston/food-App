@@ -23,6 +23,7 @@ export default function Signin() {
       if(!json.success){
         alert("Enter valid credentials");
       }else{
+        localStorage.setItem("UserId",JSON.stringify({"id":json.id,"name":json.name,"email":json.email,"location":json.location}))
         navigate("/");
       }
     }
