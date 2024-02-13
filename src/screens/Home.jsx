@@ -67,7 +67,7 @@ export default function Home() {
                 {
                   (fooditems != []) ? fooditems.filter((item)=>(item.CategoryName==data.CategoryName)&& item.name.toLowerCase().includes(search.toLowerCase())).map((fdata)=>{
                     return(<div key={fdata._id} className="col-12 col-md-6 col-lg-3 m-3">
-                      <Card name={fdata.name} description={fdata.description} img={fdata.img} options={fdata.options[0]}/>
+                      <Card _id={fdata._id} name={fdata.name} description={fdata.description} img={fdata.img} options={fdata.options[0]}/>
                     </div>)
                   }):""
                 }
