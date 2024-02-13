@@ -34,3 +34,10 @@
   justify-content: center;
   width: 100%;
 }
+.scrollable-container {
+  width: -webkit-fill-available; /* Set the width of your container */
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow-x: auto; /* Enable horizontal scrolling */
+   /* Optional: Add border for styling */
+}
+

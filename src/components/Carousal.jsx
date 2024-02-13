@@ -7,7 +7,7 @@ import '../App.css';
 
 export default function Carousal() {
     return (
-        <div id="carouselExampleControls" className="carousel slide bgsend w-100" data-bs-ride="carousel" style={{maxHeight:"700px",objectFit:"contain !important"}}>
+        <div id="carouselExampleControls" className="carousel slide bgsend w-100" data-bs-ride="carousel" style={{maxHeight:"fit-content",objectFit:"contain !important"}}>
             <div className="carousel-inner">
                 <div className="carousel-item active">
                     <img src={img1} className="d-block w-100 " alt="..."/>
