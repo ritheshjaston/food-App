@@ -49,6 +49,7 @@ roter.post(
         return res.status(400).json({ errors: "Invalid Password" });
       }
       return res.json({ success: true });
+      
     } catch (error) {
       console.log(error);
       res.json({ success: false });
