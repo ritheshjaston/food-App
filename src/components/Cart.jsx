@@ -2,13 +2,43 @@ import React, { useEffect, useState } from 'react'
 import '../Styler.css'
 export default function Cart() {
     const data = JSON.parse(localStorage.getItem("cart"));
-    console.log(data)
+    const logeduser = JSON.parse(localStorage.getItem("UserId"));
+    console.log(data,'data')
+    const finalnew={cartdata:data}
+    console.log(finalnew,"final new")
     let total=0;
-    data.map((d)=>(total=total+d.total));
+    data?.map((d)=>{
+        total=total+d.total;
+
+    });
     console.log(total)
 
-    const handler=()=>{
-        
+    const handler= async(e)=>{
+        e.preventDefault();
+        const response=await fetch("http://localhost:5000/api/cart",{
+          method:'POST',
+          headers:{
+            'Content-type':'Application/json'
+          },
+          body:JSON.stringify(data)
+      })
+      const json = await response.json();
+      console.log(json);
+  
+      if(!json.success){
+        alert("Failed");
+      }else{
+        alert("Success")
+      }
+    }
+
+    if(!data){
+        return(
+            <div>
+            <h1 className='header'>Cart</h1>
+            <h5 style={{textAlign:"center",color:"#FFC107",marginTop:"50px"}}>Cart is empty</h5>
+            </div>
+        );
     }
     return (
         <div>
@@ -16,7 +46,7 @@ export default function Cart() {
             <div className="main">
                 {
 
-                    data.map((row)=>{
+                    data?.map((row)=>{
                         return(
                             
                             <div className="sub">

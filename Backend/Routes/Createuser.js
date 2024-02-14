@@ -1,6 +1,7 @@
 const express = require("express");
 const roter = express.Router();
 const user = require("../models/User");
+const cart=require("../models/cart");
 const { body, validationResult } = require("express-validator");
 
 roter.post(
@@ -54,6 +55,21 @@ roter.post(
     } catch (error) {
       console.log(error);
       res.json({ success: false });
+    }
+  }
+);
+
+roter.post(
+  "/cart",
+  async (req, res) => {
+    try {
+      const data = req.body; 
+      // Assuming cart.create is an asynchronous function
+      await cart.insertMany(data);
+      res.json({ success: true });
+    } catch (error) {
+      console.error(error);
+      res.json({ success: false, error: 'Internal Server Error' });
     }
   }
 );

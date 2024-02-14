@@ -27,11 +27,12 @@ export default function Card(props) {
 
 
   }
+  const logeduser = JSON.parse(localStorage.getItem("UserId"));
   const getprice = async (e,img,title) => {
     const existingData = JSON.parse(localStorage.getItem("cart")) || [];
-
     const newData = {
-      id: e,
+      client_id:logeduser.id,
+      item_id: e,
       quantity: count,
       size: horf,
       total: price,
