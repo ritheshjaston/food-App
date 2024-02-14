@@ -7,6 +7,8 @@ export default function Card(props) {
   const [count, setcount] = useState(1);
   const [amount, setamount] = useState("");
   const [horf, sethorf] = useState("");
+
+
   // let prizeoptions = Object.keys(options);
   // console.log(options)
   const [data, setdata] = useState({});
@@ -25,14 +27,16 @@ export default function Card(props) {
 
 
   }
-  const getprice = async (e) => {
+  const getprice = async (e,img,title) => {
     const existingData = JSON.parse(localStorage.getItem("cart")) || [];
 
     const newData = {
       id: e,
       quantity: count,
       size: horf,
-      total: price
+      total: price,
+      img:img,
+      title:title
     };
     await setdata(newData);
     const finalData = [...existingData, newData];
@@ -84,7 +88,7 @@ export default function Card(props) {
             </div>
             <hr />
             {
-              localStorage.getItem("UserId") ?<button className='btn bg-success ml-2' onClick={() => getprice(props._id)}>Add to Cart</button>:""
+              localStorage.getItem("UserId") ?<button className='btn bg-success ml-2' onClick={() => getprice(props._id,props.img,props.name)}>Add to Cart</button>:""
             }
             
           </div>

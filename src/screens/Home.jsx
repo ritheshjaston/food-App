@@ -34,43 +34,43 @@ export default function Home() {
         <h1 className="textabovecaurosol">Anything, anytime, <br />anywhere</h1>
         {/* search */}
         <div className="searchbarz w-100">
-            <nav className="navbar navbar-light w-50 ">
-                <div className="container-fluid w-100" >
-                    <div className="d-flex w-100">
-                        <input 
-                            className="form-control"
-                            type="search"
-                            placeholder="Search"
-                            aria-label="Search"
-                            value={search}
-                            onChange={(e)=>{setsearch(e.target.value)}}
-                        />
-                        
-                    </div>
-                </div>
-            </nav>
+          <nav className="navbar navbar-light w-50 ">
+            <div className="container-fluid w-100" >
+              <div className="d-flex w-100">
+                <input
+                  className="form-control"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                  value={search}
+                  onChange={(e) => { setsearch(e.target.value) }}
+                />
+
+              </div>
+            </div>
+          </nav>
         </div>
       </div>
       <div>
         <Carousal />
       </div>
 
-      <div style={{ margin: "10px" ,color:"white"}} >
+      <div style={{ margin: "10px", color: "white" }} >
         {
           (foodcat != []) ? foodcat.map((data) => {
             return (
 
               <div className="container" >
-              <h4>{data.CategoryName}</h4>
-                <div key={data._id} style={{color:"white"}} className="row mb-3">
-                
-                {
-                  (fooditems != []) ? fooditems.filter((item)=>(item.CategoryName==data.CategoryName)&& item.name.toLowerCase().includes(search.toLowerCase())).map((fdata)=>{
-                    return(<div key={fdata._id} className="col-12 col-md-6 col-lg-3 m-3">
-                      <Card _id={fdata._id} name={fdata.name} description={fdata.description} img={fdata.img} options={fdata.options[0]}/>
-                    </div>)
-                  }):""
-                }
+                <h4>{data.CategoryName}</h4>
+                <div key={data._id} style={{ color: "white" }} className="row mb-3">
+
+                  {
+                    (fooditems != []) ? fooditems.filter((item) => (item.CategoryName == data.CategoryName) && item.name.toLowerCase().includes(search.toLowerCase())).map((fdata) => {
+                      return (<div key={fdata._id} className="col-12 col-md-6 col-lg-3 m-3">
+                        <Card _id={fdata._id} name={fdata.name} description={fdata.description} img={fdata.img} options={fdata.options[0]} />
+                      </div>)
+                    }) : ""
+                  }
                 </div>
               </div>
             );
@@ -83,6 +83,9 @@ export default function Home() {
       <div>
         <Footer />
       </div>
+
+
+      
     </div>
   );
 }

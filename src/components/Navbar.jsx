@@ -30,7 +30,7 @@ export default function Navbar() {
                     {localStorage.getItem("UserId") ?
                         <div className='d-flex'>
                             <li className="nav-item">
-                                <Link className="btn bg-success ml-2 " to="/">Cart</Link>
+                                <Link className="btn bg-success ml-2 " to="/cart">Cart</Link>
                             </li>
                             <li className="nav-item">
                                 <button className="btn bg-danger" onClick={logout}>Log Out</button>
@@ -49,6 +49,8 @@ export default function Navbar() {
 
                 </div>
             </div>
+
+            
         </nav>
     )
 }

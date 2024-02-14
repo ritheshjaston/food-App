@@ -2,6 +2,7 @@ import "./App.css";
 import Home from "./screens/Home";
 import Signup from "./screens/Signup";
 import Signin from "./screens/Signin";
+import Cart from "./components/Cart";
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 
 
@@ -13,6 +14,7 @@ function App() {
           <Route exact path="/" element={<Home />}></Route>
           <Route exact path="/signup" element={<Signup />}></Route>
           <Route exact path="/login" element={<Signin />}></Route>
+          <Route exact path="/cart" element={<Cart />}></Route>
         </Routes>
       </BrowserRouter>
 

@@ -1,0 +1,52 @@
+.header{
+    text-align: center;
+    color: white;
+    margin-top: 10px;
+}
+.sub{
+    width: 95%;
+    margin: 20px;
+    background: #FFC107;
+    border-radius: 10px;
+    height: fit-content;
+    display: flex;
+}
+.images{
+    width: 250px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    object-fit: fill;
+    height: -webkit-fill-available;
+}
+.inerdata{
+    margin-left: 13px;
+}
+.inerdata h4{
+    color: white;
+}
+.Amt{
+    padding: 4%;
+    color: blue;
+    font-family: fangsong;
+}
+.Amt h2{
+    color: red;
+}
+.cal{
+    text-align: right;
+    width: 81%;
+    color: #FFC107;
+}
+.cal span{
+    font-size: xx-large;
+    color: red;
+    margin-left: 23px;
+}
+.cal button{
+    width: 255px;
+    height: 50px;
+    border-radius: 10px;
+    background: green;
+    border: none;
+    margin-bottom: 100px;
+}
