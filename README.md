@@ -1,16 +1,16 @@
-# Food App
-## Mern Stack Project 
+# Food App - MERN Stack Project
 
-<b>Description</b>: The project was all about food ordering with react as front end and express js as a provider and mongodb nosql based database. The project orders the food of any user.<br>
+**Description**: This project focuses on food ordering, with React as the frontend, Express.js as the backend, and MongoDB as the NoSQL-based database. The application allows users to place food orders.
 
-##View
-<hr/>
-<iframe width="640" height="360" src="https://youtu.be/0UKdlP2y-iY?si=HtiqQDdS4B-YMqS5" frameborder="0" allowfullscreen></iframe>
+## View
+---
 
-##Snap Shots
-<hr/>
-<img src="https://github.com/ritheshjaston/food-App/blob/main/Snapshots%20Project/pic1.png?raw=true"/>
-<img src="https://github.com/ritheshjaston/food-App/blob/main/Snapshots%20Project/pic2.png?raw=true"/>
-<img src="https://github.com/ritheshjaston/food-App/blob/main/Snapshots%20Project/pic3.png?raw=true"/>
-<img src="https://github.com/ritheshjaston/food-App/blob/main/Snapshots%20Project/pic4.png?raw=true"/>
+**Working Video**: [Watch the Video](https://youtu.be/0UKdlP2y-iY?si=HtiqQDdS4B-YMqS5)
 
+## Snapshots
+---
+
+![Snapshot 1](https://github.com/ritheshjaston/food-App/blob/main/Snapshots%20Project/pic1.png?raw=true)
+![Snapshot 2](https://github.com/ritheshjaston/food-App/blob/main/Snapshots%20Project/pic2.png?raw=true)
+![Snapshot 3](https://github.com/ritheshjaston/food-App/blob/main/Snapshots%20Project/pic3.png?raw=true)
+![Snapshot 4](https://github.com/ritheshjaston/food-App/blob/main/Snapshots%20Project/pic4.png?raw=true)
