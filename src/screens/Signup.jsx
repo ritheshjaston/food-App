@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import '../my.css'
-import { Link } from 'react-router-dom' 
+import { Link, useNavigate  } from 'react-router-dom' 
 export default function Signup() {
   const [credentials, setcredentials]=useState({name:"",email:"",password:"",geolocation:""});
-
+  const navigate = useNavigate();
   const handlesubmit= async(e)=>{
       e.preventDefault();
       const response=await fetch("http://localhost:5000/api/createuser",{
@@ -23,6 +23,8 @@ export default function Signup() {
 
     if(!json.success){
       alert("Enter valid credentials");
+    }else{
+      navigate('/login');
     }
   }
   const change=(event)=>[

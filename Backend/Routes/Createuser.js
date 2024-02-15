@@ -65,7 +65,7 @@ roter.post(
     try {
       const data = req.body; 
       // Assuming cart.create is an asynchronous function
-      await cart.insertMany(data);
+      await cart.create(data);
       res.json({ success: true });
     } catch (error) {
       console.error(error);

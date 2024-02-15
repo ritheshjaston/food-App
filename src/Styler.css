@@ -16,7 +16,7 @@
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     object-fit: fill;
-    height: -webkit-fill-available;
+    height: 190px;
 }
 .inerdata{
     margin-left: 13px;
@@ -49,4 +49,9 @@
     background: green;
     border: none;
     margin-bottom: 100px;
+    margin-left: 10px;
+}
+.mainer{
+    background-color: white;
+
 }

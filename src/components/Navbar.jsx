@@ -22,7 +22,7 @@ export default function Navbar() {
                         </li>
                         {
                             localStorage.getItem("UserId") ? <li className="nav-item">
-                                <Link className="nav-link active" aria-current="page" to="/">My Orders</Link>
+                                <Link className="nav-link active" aria-current="page" to="/oreders">My Orders</Link>
                             </li> : ""
                         }
 

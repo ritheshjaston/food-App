@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import '../Styler.css'
+import { useNavigate } from 'react-router-dom';
 export default function Cart() {
+    const navigate = useNavigate();
     const data = JSON.parse(localStorage.getItem("cart"));
     const logeduser = JSON.parse(localStorage.getItem("UserId"));
     console.log(data,'data')
@@ -20,16 +22,23 @@ export default function Cart() {
           headers:{
             'Content-type':'Application/json'
           },
-          body:JSON.stringify(data)
+          body:JSON.stringify(finalnew)
       })
       const json = await response.json();
       console.log(json);
   
       if(!json.success){
-        alert("Failed");
+        alert("Your Order Failed");
       }else{
-        alert("Success")
+        alert("Your Order has been placed..!")
+        localStorage.removeItem("cart");
+        navigate('/oreders');
       }
+    }
+
+    const handleremptycart=()=>{
+        localStorage.removeItem("cart");
+        navigate('/');
     }
 
     if(!data){
@@ -82,6 +91,7 @@ export default function Cart() {
             </div>
             <div className='cal'>
                 <b>Total Amoubt:  </b> <span>{total}</span><br /><br />
+                <button onClick={handleremptycart} style={{background:"red"}}>Empty Cart</button>
                 <button onClick={handler}>Check Out</button>
             </div>
         </div>

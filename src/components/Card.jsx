@@ -43,6 +43,7 @@ export default function Card(props) {
     const finalData = [...existingData, newData];
     await localStorage.setItem("cart", JSON.stringify(finalData));
     console.log(finalData);
+    
   };
 
   useEffect(() => {
