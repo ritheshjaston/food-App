@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="col-md-4 d-flex align-items-center">
           <Link to="/" className="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
           </Link>
-          <span className="text-muted"><font style={{"vertical-align": "inherit"}}><font style={{"vertical-align": "inherit"}}>© 2021 Company, Inc</font></font></span>
+          <span className="text-muted"><font style={{"vertical-align": "inherit"}}><font style={{"vertical-align": "inherit"}}>© 2024 Company, Inc</font></font></span>
         </div>
 
         <ul className="nav col-md-4 justify-content-end list-unstyled d-flex">

@@ -43,7 +43,8 @@ export default function Card(props) {
     const finalData = [...existingData, newData];
     await localStorage.setItem("cart", JSON.stringify(finalData));
     console.log(finalData);
-    
+    document.getElementById(e).style.color="green";
+    document.getElementById(e+"1").style.color="white";
   };
 
   useEffect(() => {
@@ -86,11 +87,11 @@ export default function Card(props) {
             </select>
             <br />
             <div className="d-inline h-100 fs-5">
-              Total Price <b style={{ color: "red" }}>{(price == 0) ? "" : price}</b>
+              Total Price <b style={{ color: "red" }} id={props._id}>{(price == 0) ? "" : price}</b>
             </div>
             <hr />
             {
-              localStorage.getItem("UserId") ?<button className='btn bg-success ml-2' onClick={() => getprice(props._id,props.img,props.name)}>Add to Cart</button>:""
+              localStorage.getItem("UserId") ?<button className='btn bg-success ml-2' onClick={() => getprice(props._id,props.img,props.name)} id={props._id+"1"}>Add to Cart</button>:""
             }
             
           </div>
